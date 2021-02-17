@@ -1,0 +1,16 @@
+h1, p{
+  text-align: center;
+}
+
+.lista-sites:hover{
+  background-color: red;
+}
+.lista-sites:active{
+  font-family:monospace;
+  font-size: 20px;
+}
+
+
+ol, ul{
+  list-style: none;
+}
