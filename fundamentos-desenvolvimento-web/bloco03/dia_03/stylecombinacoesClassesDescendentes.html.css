@@ -46,3 +46,28 @@ ul:nth-of-type(1) li:nth-of-type(-n+3){
   color: blue;
 }
 
+/* Exercício 5 */
+
+ul:nth-of-type(2) li:hover {
+font-weight: bold;
+text-decoration: none;
+}
+
+ul:nth-of-type(2) li:nth-of-type(1) a:hover {
+  color: orange;
+}
+ul:nth-of-type(2) li:nth-of-type(2) a:hover {
+  color: green;
+}
+
+ul:nth-of-type(2) li:nth-of-type(3) a:hover {
+  color: black;
+}
+
+ul:nth-of-type(2) li:nth-of-type(4) a:hover {
+  color: yellow;
+}
+
+ul:nth-of-type(2) li:nth-of-type(5) a:hover {
+  color:green;
+}
