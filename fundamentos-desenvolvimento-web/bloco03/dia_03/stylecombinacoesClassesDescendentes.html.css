@@ -14,19 +14,22 @@
 
 */
 
-
+/* Exercício 1 */
 ol{
   background-color: yellow;
 }
-ol li:nth-child(3n+6){
+ol li:nth-of-type(even) {
   color: green;
 }
+
+/* Exercício 2 */
 
 h1, h2, h3, h4, h5, h6 {
   color: red;
 }
-h1, h2, h3, h4, h5, h6:has(em) {
-  background-color: black;
+h1 em {
+ font-size: 40px;
+ border: 1px black solid;
 }
 
 li{
