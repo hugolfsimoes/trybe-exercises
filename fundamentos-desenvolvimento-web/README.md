@@ -5,7 +5,7 @@
 Neste primeiro módulo será ensinado tudo que preciso saber para iniciar minha carreira no mundo do desenvolvimento Web, virando uma pessoa preparada para os módulos de front-end e back-end.
 
 
-###### [X] Bloco 01: Unix, Bash e Shell Script
+[X] ######  Bloco 01: Unix, Bash e Shell Script
 
 ###### Bloco 02: Git, GitHub e Internet
 
