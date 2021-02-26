@@ -1,4 +1,4 @@
-let n = 5 //Math.ceil((Math.random() * 20));
+let n = Math.ceil((Math.random() * 20));
 let auxEspaco = n - 1;
 let auxAterisco = 1;
 let resposta = "";
