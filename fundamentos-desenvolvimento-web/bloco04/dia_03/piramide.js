@@ -8,7 +8,7 @@ n = 5
 
 
 
-let n = 5; //Math.ceil((Math.random() * 20));
+let n = Math.ceil((Math.random() * 20));
 let lineIndex;
 let lineColumn;
 let lineInput = "";
