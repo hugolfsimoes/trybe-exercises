@@ -1,4 +1,4 @@
-let n = 7; //Math.ceil((Math.random() * 20));
+let n = Math.ceil((Math.random() * 20));
 
 let middle = (n + 1) / 2;
 let controlLeft = middle;

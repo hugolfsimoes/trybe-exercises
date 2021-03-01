@@ -8,7 +8,7 @@ n = 5
 
 
 
-let n = Math.ceil((Math.random() * 20));
+let n = 5 // Math.ceil((Math.random() * 20));
 let lineIndex;
 let lineColumn;
 let lineInput = "";
@@ -24,7 +24,7 @@ for (let lineIndex = 0; lineIndex <= midOfMatrix; lineIndex += 1) {
     if (lineColumn > ControlRight && lineColumn < controlLeft) {
       lineInput = lineInput + symbol;
     } else {
-      lineInput = lineInput + " ";
+      lineInput = lineInput + "-";
     }
   }
 
