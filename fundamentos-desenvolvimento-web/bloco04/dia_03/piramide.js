@@ -1,25 +1,35 @@
-let n = 7; //Math.ceil((Math.random() * 20));
-let aux = n;
-let aux2 = 1;
+/*Por fim, faça uma pirâmide com n asteriscos de base:
+Copiar
+n = 5
 
-let teste = "";
+     *
+    ***
+   *****                                    */
+
+
+
+let n = 5 // Math.ceil((Math.random() * 20));
+let lineIndex;
+let lineColumn;
+let lineInput = "";
+let symbol = '*';
 console.log(n);
 
-for (let vertical = 1; vertical < n; vertical += 2) {
-  teste = "";
-  for (let espaco = 0; Math.floor(aux / 2) >= espaco; espaco++) {
+let midOfMatrix = (n + 1) / 2;
+let controlLeft = midOfMatrix;
+let ControlRight = midOfMatrix;
 
-    teste += " - "
-
-    aux--;
+for (let lineIndex = 0; lineIndex <= midOfMatrix; lineIndex += 1) {
+  for (lineColumn = 1; lineColumn <= n; lineColumn += 1) {
+    if (lineColumn > ControlRight && lineColumn < controlLeft) {
+      lineInput = lineInput + symbol;
+    } else {
+      lineInput = lineInput + "-";
+    }
   }
-  for (let asterisco = 0; asterisco < aux2; asterisco++) {
-    teste += " * "
-  }
 
-
-  console.log(teste);
-  console.log("");
-
-
+  console.log(lineInput);
+  lineInput = "";
+  ControlRight -= 1;
+  controlLeft += 1;
 }

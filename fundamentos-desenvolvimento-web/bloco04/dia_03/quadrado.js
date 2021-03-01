@@ -1,6 +1,6 @@
 let n = Math.ceil((Math.random() * 20));
 
-let teste
+let teste;
 console.log(n);
 
 for (let indexHorizontal = 0; indexHorizontal < n; indexHorizontal += 1) {
