@@ -54,17 +54,16 @@ nav a{
    text-decoration: underline;
  }
 
-
-
 .article {
   background-color:lightgray;
   border: 1px solid grey;
   float: left;
   margin: 25px 0px 25px 25px;
   padding: 0 25px;
-  width: 45%;
+  width: 70%;
   font-size: 20px;
   line-height: 1.5em;
+  text-align: center;
 }
 .article h2{
   padding: 25px 0 25px 0;
@@ -74,40 +73,46 @@ nav a{
   text-decoration: underline;
 }
 
-img{
+.image-contents{
   width: 500px;
   padding-top: 15px;
+  
 }
 
+.video h3{
+  text-decoration: underline;
+}
+.video{
+  color: #000000;
+  padding: 15px 25px;
+  text-align: center;
+}
 
+.bibliography{
+  margin-top: 25px;
+}
+.bibliography ol{
+  padding: 20px 0 25px 25px;
+  text-align: left;
+}
 .aside{
   background-color: lightgray;
   border: 1px solid grey;
   float: right;
-  margin: 25px 25px 25px 0px;;
+  margin: 25px 50px 0px 0px;;
   padding: 25px;
-  width: 45%;
-  height: 1200px;
-  font-size: 20px;
+  width: 15%;
+  height: 400px;
   line-height: 1.5em;
-  text-align: center;
+  
 }
 table{
-  margin: 0 170px 0 160px;
-  text-align: center;
-  width: 400px;
-
+  margin: auto;
+  width: 200px;
   color: black;
-  font-size: 20px;
+  font-size: 16px;
 }
 
-.section-table {
-  text-align: center;
-  display: inline-block;
-  right: 0px;
-
-
-}
 caption{
   text-align: center;
   font-weight: bold;
@@ -119,34 +124,10 @@ table tr{
   text-align: center;
 
 }
-table td {
-  text-align: center;
-  padding: 5px;
 
-}
 table td {
   text-align: center;
   pad: 10px;
-}
-
-.video h2{
-  margin-top: 70px;
-  text-decoration: underline;
-}
-.video h3{
-  text-decoration: underline;
-}
-.video{
-  color: #000000;
-  padding: 15px 25px;
-}
-
-.bibliography{
-  margin-top: 25px;
-}
-.bibliography ol{
-  padding: 20px 0 25px 25px;
-  text-align: left;
 }
 
 footer{
@@ -155,8 +136,11 @@ footer{
   color:#000000;
   clear: both;
   font-size: 25px;
-
- 
   text-align: center;
+  line-height: 2em;  
 }
 
+.imagem-linkedin{
+  width: 50px;
+  padding: 10px;
+}

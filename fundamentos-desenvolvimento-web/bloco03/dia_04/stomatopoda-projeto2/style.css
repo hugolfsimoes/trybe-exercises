@@ -1,0 +1,228 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{ 
+
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 16px;
+}
+
+header{
+  height: 200px;
+}
+header h1{
+  text-align: center;
+  font-size: 40px;
+  margin-top: 40px;
+}
+
+nav{
+  text-align: right;
+}
+ul{
+/*   position: absolute; */
+  right: 10px;
+  top: 100px;
+
+}
+ul li{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 20px;
+ 
+}
+
+ul li:hover{
+  text-decoration: underline;
+}
+span{
+  font-weight: bolder;
+}
+
+article{
+  margin: 25px;
+  line-height: 1.5em;
+}
+article h1{
+  text-align: center;
+  font-size: 40px;
+  padding: 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+article h2{
+padding: 30px 0 10px 0;
+}
+article p{
+  padding: 5px 0;
+}
+section{
+  padding: 10px;
+}
+
+.text-introduction{
+  display: inline-block;
+  width: 70%;
+  vertical-align: top;
+  text-align: justify;
+
+}
+
+.aside-table{
+  width: auto;
+  height: auto;
+ text-align: center;
+ display: inline-block;
+ position: absolute;
+ right: 70px;
+}
+
+table{
+  margin-left: 200px;
+  vertical-align: top;
+}
+caption{
+  font-size: 25px;
+  padding: 25px;
+  border: black 2px double;
+}
+table tr{
+  width: 50px;
+  height: 30px;
+  font-size: 25px;
+  
+}
+table th{
+  text-align: center;
+  padding: 10px;
+}
+table td{
+  text-align: center;
+  padding: 10px;
+  
+}
+
+article h1{
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 30px;
+
+}
+
+.section-description{
+  width: 100%;
+  vertical-align: top;
+  display: inline-block;
+  vertical-align: top;
+  text-align: justify;
+}
+.text-description{
+  width: 70%;
+  display: inline-block;
+  
+}
+.img-description{
+  width: auto;
+  display: inline-block;
+  margin-left: 35px;
+}
+.img-description img{
+  width: 400px;
+  height: 325px;
+  border-radius: 100%;
+  
+
+}
+.section-vision{
+  width: 100%;
+  vertical-align: top;
+  display: inline-block;
+
+  
+}
+.img-vision{
+  display: inline-block;
+}
+.img-vision img{
+  width: 400px;
+  height: 325px;
+  border-radius: 100%;
+  
+}
+.text-vision{
+display: inline-block;
+width: 70%;
+vertical-align: top;
+}
+
+.section-punsh{
+  width: 100%;
+  vertical-align: top;
+  display: inline-block;
+}
+.text-punsh{
+  display: inline-block;
+  width: 70%;
+  vertical-align: top;
+
+}
+.img-punsh{
+  display: inline-block;
+}
+.img-punsh img{
+  width: 400px;
+  height: 325px;
+  border-radius: 100%;
+
+}
+.section-curiosities{
+  width: 100%;
+  vertical-align: top;
+  display: inline-block;
+  
+}
+.img-curiosities{
+  display: inline-block;
+}
+.img-curiosities img{
+  width: 400px;
+  height: 300px;
+  border-radius: 100%;
+  
+}
+.text-curiosities{
+  width: 70%;
+  text-align: justify;
+  display: inline-block;
+  vertical-align: top;
+}
+.section-references{
+  width: 70%;
+  vertical-align: top;
+  display: inline-block;
+  text-align: justify;
+}
+.section-references li{
+  margin-left: 25px;
+  text-align: justify;
+}
+footer{
+  background-color: darkgray;
+  height: 200px;
+  text-align: center;
+  width: auto;
+  font-size: 10px;
+  
+  
+}
+footer h1:nth-child(1){
+  
+  padding-top: 80px;
+
+  
+
+
+}
