@@ -94,8 +94,48 @@
     criaTagDivesTres.className = "left-content";
     tagDivTres.appendChild(criaTagDivesTres);
 
+    //Questão 6 - Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
+
+    let tagDivQuatro = document.querySelector('.main-content');
+    let criaTagDivQuatro = document.createElement('div');
+    criaTagDivQuatro.className = "right-content";
+    tagDivQuatro.appendChild(criaTagDivQuatro);
+
+    //Questão 7 - Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do div criado no passo 5;
+
+    let imagem = document.querySelector('.left-content')
+    let criaImagem = document.createElement('img')
+    criaImagem.src = "https://picsum.photos/200";
+    criaImagem.className = "small-image";
+    imagem.appendChild(criaImagem);
+
+    //Questão 8 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+
+    let lista = document.querySelector('.right-content');
+    let criaLista = document.createElement('ul');
+    lista.appendChild(criaLista);
+
+    let arrayNumber = ["Um", "Dois", "Três", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove", "Dez"];
+    for (let key in arrayNumber) {
+      let tagLi = document.querySelector('ul');
+      let criaTagLi = document.createElement('li');
+      criaTagLi.innerText = arrayNumber[key];
+      tagLi.appendChild(criaTagLi);
+    }
+
+    //Questão 9 - Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
+
+
+    let tagH3 = document.querySelector('.main-content');
+    for (let index = 0; index < 3; index += 1) {
+      let criaTagH3 = document.createElement('h3');
+      tagH3.appendChild(criaTagH3);
+
+    }
+/*  -------------------------------------------------------------------- */
+
     
-  </script>
+</script>
 </body>
 
 </html>
