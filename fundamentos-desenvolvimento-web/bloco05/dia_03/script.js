@@ -45,10 +45,10 @@ for (let key in dezDaysList) {
 /*Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
 Adicione a este botão a ID "btn-holiday" .
 Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .*/
+let tagDiv = document.querySelector('.buttons-container');
 
 function CriaBotaoFeriados(feriados) {
 
-  let tagDiv = document.querySelector('.buttons-container');
   criaBtn = document.createElement('button');
   criaBtn.innerHTML = feriados;
   criaBtn.id = 'btn-holiday';
@@ -86,6 +86,11 @@ e crie dinamicamente um botão com o nome "Sexta-feira".
 Adicione a este botão o ID "btn-friday".
 Adicione este botão como filho / filha da tag < div > com classe "buttons-container".*/
 
-function CriaBotaoSexta(sexta){
-  
+function criaBotaoSexta(sexta) {
+  criaBtn = document.createElement('button');
+  criaBtn.innerHTML = sexta;
+  tagDiv.appendChild(criaBtn);
+  criaBtn.id = 'btn-friday';
 }
+
+criaBotaoSexta('Sexta-feira');
