@@ -25,13 +25,12 @@ const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
 let listaUlDays = document.querySelector('#days');
-console.log(listaUlDays);
 
 for (let key in dezDaysList) {
   let criaDay = document.createElement('li')
   criaDay.innerHTML = dezDaysList[key];
 
-  listaUlDays.appendChild(criaDay).className = 'days';
+  listaUlDays.appendChild(criaDay).className = 'day';
   if (dezDaysList[key] === 24 || dezDaysList[key] === 25 || dezDaysList[key] === 31) {
     criaDay.className += ' holiday';
   }
@@ -118,3 +117,62 @@ function trocaTextoSexta(event) {
   event.preventDefault();
 }
 
+/* Exercício 6:
+Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+Dica - Propriedade: event.target . */
+function dayMouseOver() {
+  let days = document.querySelector('#days');
+
+  days.addEventListener('mouseover', function (event) {
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
+  })
+};
+
+function dayMouseOut() {
+  let days = document.querySelector('#days');
+
+  days.addEventListener('mouseout', function (event) {
+    event.target.style.fontWeight = '200';
+    event.target.style.fontSize = '20px';
+  })
+};
+
+dayMouseOver();
+dayMouseOut();
+
+
+/* Exercício 7:
+Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
+O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" . */
+let divTask = document.querySelector('.my-tasks');
+
+function tarefa(acao) {
+
+  let criaTask = document.createElement('span');
+  criaTask.innerText = acao;
+  divTask.appendChild(criaTask)
+};
+
+tarefa('MALHAAAAR');
+
+/* Exercício 8:
+Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior. Esta função deverá receber como parâmetro uma string ("cor") e criar dinamicamente um elemento de tag <div> com a classe task .
+O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
+O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" . */
+
+
+function legend(cor) {
+
+  let task = document.querySelector('span');
+  let criaDivTask = document.createElement('div');
+  criaDivTask.className = 'task';
+  divTask.appendChild(criaDivTask);
+  criaDivTask.style.backgroundColor = cor
+}
+
+legend('yellow');
+
+/* Exercício 9:
+Implemente uma função que adiciona um evento que ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected ela estará selecionada.
+Ao clicar novamente no elemento a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada. */
