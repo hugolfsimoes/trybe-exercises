@@ -168,7 +168,7 @@ function legend(cor) {
   let criaDivTask = document.createElement('div');
   criaDivTask.className = 'task';
   divTask.appendChild(criaDivTask);
-  criaDivTask.style.backgroundColor = cor
+  criaDivTask.style.backgroundColor = cor;
 }
 
 legend('yellow');
@@ -197,3 +197,21 @@ taskSelected();
 /* Exercício 10
 Implemente uma função que adiciona um evento que ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
 Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) . */
+function setDayColor() {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let days = document.querySelector('#days');
+  let taskDiv = document.querySelector('.task');
+  let taskColor = taskDiv.style.backgroundColor;
+
+  days.addEventListener('click', function (event) {
+    let eventTargetColor = event.target.style.color;
+    if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+      let color = selectedTask[0].style.backgroundColor;
+      event.target.style.color = color;
+    } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
+      event.target.style.color = 'rgb(119,119,119)';
+    }
+  });
+};
+
+setDayColor();
