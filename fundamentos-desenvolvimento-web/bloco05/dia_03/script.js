@@ -176,3 +176,24 @@ legend('yellow');
 /* Exercício 9:
 Implemente uma função que adiciona um evento que ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected ela estará selecionada.
 Ao clicar novamente no elemento a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada. */
+
+
+function taskSelected() {
+  let tarefaSelecionada = document.getElementsByClassName('task selected');
+  let tarefa = document.querySelector('.task');
+  tarefa.addEventListener('click', function (event) {
+    if (tarefaSelecionada.length === 0) {
+      tarefa.className = "task selected";
+    } else {
+      event.target.className = 'task';
+    }
+
+  })
+
+}
+taskSelected();
+
+
+/* Exercício 10
+Implemente uma função que adiciona um evento que ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
+Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) . */
