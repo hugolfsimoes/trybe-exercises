@@ -4,19 +4,42 @@
 }
 
 header {
-  background-color: red;
   height: 250px;
 }
 
 h1 {
   padding-top: 40px;
   text-align: center;
+
+}
+
+.input-box {
+  text-align: center;
+  padding: 80px 90px 90px;
+
+}
+
+.input-box input {
+  margin-right: 40px;
+}
+
+label {
+  padding: 5px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+
+.btn-refresh {
+  position: absolute;
+  top: 220px;
+  left: 870px;
+  width: 200px;
+  font-size: 20px;
 }
 
 p {
   text-align: center;
   padding: 40px 25px 0 40px;
   width: auto;
-  line-height: 2em;
-
 }
