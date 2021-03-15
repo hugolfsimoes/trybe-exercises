@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="" method="GET" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Informações Pessoais</legend>
+      <label for="input-name">Nome:<input id="input-name" type="text" maxlength="40" required></label>
+      <label for="input-email">E-mail:<input id="input-email" type="email" maxlength="50" required></label>
+      <label for="input-cpf">CPF: <input id="input-cpf" type="text" maxlength="11" required></label>
+      <label for="input-endereco">Endereço: <input id="input-endereco" type="text" maxlength="200" required></label>
+      <label for="input-cidade">Cidade: <input id="input-cidade" type="text" maxlength="28" required></label>
+      <div>
+        <label for="select-estado">Estado:</label>
+        <select name="estado" id="select-estado" required>
+        </select>
+      </div>
+      <div>
+        <label for="radio">Tipo:</label>
+        <input name="radio" type="radio" id="radio-casa">Casa
+        <input name="radio" type="radio" id="radio-apt">Apartamento
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <textarea name="resumo-curriculo" id="curriculo" cols="75" rows="20" maxlength="1000" required></textarea>
+      <label for="input-cargo">Cargo:<input id="input-cargo" type="text" maxlength="40" required></label>
+    </fieldset>
+    <label for="input-descricao">Descrição do Cargo: <input type="text" id="input-descricao" maxlength="500"
+        required></label>
+    <label for="input-data">Data de Início <input id="input-data" type="date" required> </label>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
