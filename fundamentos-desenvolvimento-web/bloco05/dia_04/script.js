@@ -1,4 +1,4 @@
-function refreshPage(event) {
+window.onload = function () {
 
   let btnRefresh = document.querySelector('.btn-refresh');
   let backgroundPageColor = document.querySelector('#backGroundColorBox');
@@ -8,21 +8,24 @@ function refreshPage(event) {
   let fontFamily = document.querySelector('#fontFamilyBox');
   bodyStyle = document.querySelector('body')
 
+  function refreshPage(event) {
 
-  btnRefresh.addEventListener('click', function (event) {
-    bodyStyle.style.backgroundColor = backgroundPageColor.value;
-    bodyStyle.style.color = textColor.value;
-    bodyStyle.style.fontSize = fontSize.value + 'px';
-    bodyStyle.style.lineHeight = lineHeight.value + 'em';
-    bodyStyle.style.fontFamily = fontFamily.value;
+    btnRefresh.addEventListener('click', function (event) {
+      bodyStyle.style.backgroundColor = backgroundPageColor.value;
+      bodyStyle.style.color = textColor.value;
+      bodyStyle.style.fontSize = fontSize.value + 'px';
+      bodyStyle.style.lineHeight = lineHeight.value + 'em';
+      bodyStyle.style.fontFamily = fontFamily.value;
 
-    backgroundPageColor.value = '';
-    textColor.value = '';
-    fontSize.value = '';
-    lineHeight.value = '';
-    fontFamily.value = '';
-  });
+      backgroundPageColor.value = '';
+      textColor.value = '';
+      fontSize.value = '';
+      lineHeight.value = '';
+      fontFamily.value = '';
 
+    });
+
+  }
+
+  refreshPage();
 }
-
-refreshPage();
