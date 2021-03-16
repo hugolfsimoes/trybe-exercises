@@ -10,3 +10,40 @@ function adicionaEstados() {
   }
 }
 adicionaEstados();
+
+const apt = document.querySelector('#radio-apt');
+const casa = document.querySelector('#radio-casa')
+
+function validaTipo() {
+  if (apt.checked == true) {
+    apt.classList.add('resposta');
+  } else if (casa.checked == true) {
+    casa.classList.add('resposta');
+  }
+}
+validaTipo();
+
+const resposta = document.querySelectorAll('.resposta');
+const inputs = document.querySelectorAll('input');
+const divRespostas = document.querySelector('#div-respostas');
+const dataInicio = document.querySelector('#input-data');
+const btnEnviar = document.querySelector('#btn-enviar');
+btnEnviar.addEventListener('click', (event) => {
+  let dataSeparada = dataInicio.value.split('/');
+  let dia = dataSeparada[0];
+  let mes = dataSeparada[1];
+  let ano = dataSeparada[2];
+
+  if (dia <= 0 || dia > 31 || mes < 0 || mes > 12 || ano < 0) {
+    alert('Data de Início incorreta');
+    event.preventDefault();
+  } else {
+    for (index = 0; index < resposta.length; index += 1) {
+      const criaResposta = document.createElement('p');
+      criaResposta.innerHTML = resposta[index].value;
+      divRespostas.appendChild(criaResposta);
+    }
+
+    event.preventDefault();
+  }
+});

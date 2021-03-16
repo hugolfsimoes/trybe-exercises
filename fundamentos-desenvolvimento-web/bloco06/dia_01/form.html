@@ -13,14 +13,17 @@
   <form action="" method="GET" enctype="multipart/form-data">
     <fieldset>
       <legend>Informações Pessoais</legend>
-      <label for="input-name">Nome:<input id="input-name" type="text" maxlength="40" required></label>
-      <label for="input-email">E-mail:<input id="input-email" type="email" maxlength="50" required></label>
-      <label for="input-cpf">CPF: <input id="input-cpf" type="text" maxlength="11" required></label>
-      <label for="input-endereco">Endereço: <input id="input-endereco" type="text" maxlength="200" required></label>
-      <label for="input-cidade">Cidade: <input id="input-cidade" type="text" maxlength="28" required></label>
+      <label for="input-name">Nome:<input class="resposta" id="input-name" type="text" maxlength="40" required></label>
+      <label for="input-email">E-mail:<input class="resposta" id="input-email" type="email" maxlength="50"
+          required></label>
+      <label for="input-cpf">CPF: <input class="resposta" id="input-cpf" type="text" maxlength="11" required></label>
+      <label for="input-endereco">Endereço: <input class="resposta" id="input-endereco" type="text" maxlength="200"
+          required></label>
+      <label for="input-cidade">Cidade: <input class="resposta" id="input-cidade" type="text" maxlength="28"
+          required></label>
       <div>
         <label for="select-estado">Estado:</label>
-        <select name="estado" id="select-estado" required>
+        <select class="resposta" name="estado" id="select-estado" required>
         </select>
       </div>
       <div>
@@ -31,17 +34,22 @@
     </fieldset>
 
     <fieldset>
-      <textarea name="resumo-curriculo" id="curriculo" cols="75" rows="20" maxlength="1000" required></textarea>
-      <label for="input-cargo">Cargo:<input id="input-cargo" type="text" maxlength="40" required></label>
+      <textarea class="resposta" name="resumo-curriculo" id="curriculo" cols="75" rows="20" maxlength="1000"
+        required></textarea>
+      <label for="input-cargo">Cargo:<input class="resposta" id="input-cargo" type="text" maxlength="40"
+          required></label>
     </fieldset>
-    <label for="input-descricao">Descrição do Cargo: <input type="text" id="input-descricao" maxlength="500"
-        required></label>
-    <label for="input-data">Data de Início <input id="input-data" type="date" required> </label>
+    <label for="input-descricao">Descrição do Cargo: <input class="resposta" type="text" id="input-descricao"
+        maxlength="500" required></label>
+    <label for="input-data">Data de Início <input class="resposta" id="input-data" type="text" required> </label>
 
-    <button type="submit">Enviar</button>
+    <button id="btn-enviar" type="submit">Enviar</button>
   </form>
 
 
+  <div id="div-respostas"></div>
+
+  <button id="btn-limpar">Limpar</button>
   <script src="script.js"></script>
 </body>
 
