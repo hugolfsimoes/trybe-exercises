@@ -44,7 +44,6 @@ btnEnviar.addEventListener('click', (event) => {
       criaResposta.innerHTML = resposta[index].value;
       divRespostas.appendChild(criaResposta);
     }
-
     event.preventDefault();
   }
 });
