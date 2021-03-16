@@ -15,10 +15,10 @@ const apt = document.querySelector('#radio-apt');
 const casa = document.querySelector('#radio-casa')
 
 function validaTipo() {
-  if (apt.checked == true) {
-    apt.classList.add('resposta');
-  } else if (casa.checked == true) {
-    casa.classList.add('resposta');
+  if (apt.checked !== true) {
+    apt.className += ' resposta';
+  } else if (casa.checked !== true) {
+    casa.className += ' resposta';
   }
 }
 validaTipo();
@@ -38,6 +38,7 @@ btnEnviar.addEventListener('click', (event) => {
     alert('Data de Início incorreta');
     event.preventDefault();
   } else {
+    validaTipo();
     for (index = 0; index < resposta.length; index += 1) {
       const criaResposta = document.createElement('p');
       criaResposta.innerHTML = resposta[index].value;

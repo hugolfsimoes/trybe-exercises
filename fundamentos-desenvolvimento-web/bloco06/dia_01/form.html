@@ -10,39 +10,51 @@
 </head>
 
 <body>
+  <header>
+    <h1>Currículo</h1>
+  </header>
   <form action="" method="GET" enctype="multipart/form-data">
-    <fieldset>
+    <fieldset id="fieldset-informacao">
       <legend>Informações Pessoais</legend>
-      <label for="input-name">Nome:<input class="resposta" id="input-name" type="text" maxlength="40" required></label>
-      <label for="input-email">E-mail:<input class="resposta" id="input-email" type="email" maxlength="50"
-          required></label>
-      <label for="input-cpf">CPF: <input class="resposta" id="input-cpf" type="text" maxlength="11" required></label>
-      <label for="input-endereco">Endereço: <input class="resposta" id="input-endereco" type="text" maxlength="200"
-          required></label>
-      <label for="input-cidade">Cidade: <input class="resposta" id="input-cidade" type="text" maxlength="28"
-          required></label>
+      <div id="div-infPessoais">
+        <label for="input-name">Nome:<input class="resposta" id="input-name" type="text" maxlength="40"
+            required></label>
+        <label for="input-email">E-mail:<input class="resposta" id="input-email" type="email" maxlength="50"
+            required></label>
+        <label for="input-cpf">CPF: <input class="resposta" id="input-cpf" type="text" maxlength="11" required></label>
+        <label for="input-endereco">Endereço: <input class="resposta" id="input-endereco" type="text" maxlength="200"
+            required></label>
+        <label for="input-cidade">Cidade: <input class="resposta" id="input-cidade" type="text" maxlength="28"
+            required></label>
+      </div>
       <div>
         <label for="select-estado">Estado:</label>
         <select class="resposta" name="estado" id="select-estado" required>
         </select>
       </div>
       <div>
-        <label for="radio">Tipo:</label>
-        <input name="radio" type="radio" id="radio-casa">Casa
-        <input name="radio" type="radio" id="radio-apt">Apartamento
+        <label id="label-tipo" for="radio">Tipo:</label>
+
+        <label for="radio-casa">Casa<input class="radio-tipo" name="radio" type="radio" id="radio-casa"
+            value="Casa"></label>
+
+        <label for="radio-apt">Apartamento<input class="radio-tipo" name="radio" type="radio" id="radio-apt"
+            value="apt"></label>
       </div>
     </fieldset>
 
-    <fieldset>
+    <fieldset id="fieldset-qualificacoes">
+      <legend>Último Emprego</legend>
+      <label for="curriculo">Faça um resumo do seu útimo emprego:</label>
       <textarea class="resposta" name="resumo-curriculo" id="curriculo" cols="75" rows="20" maxlength="1000"
         required></textarea>
       <label for="input-cargo">Cargo:<input class="resposta" id="input-cargo" type="text" maxlength="40"
           required></label>
-    </fieldset>
-    <label for="input-descricao">Descrição do Cargo: <input class="resposta" type="text" id="input-descricao"
-        maxlength="500" required></label>
-    <label for="input-data">Data de Início <input class="resposta" id="input-data" type="text" required> </label>
 
+      <label for="input-descricao">Descrição do Cargo: <input class="resposta" type="text" id="input-descricao"
+          maxlength="500" required></label>
+      <label for="input-data">Data de Início <input class="resposta" id="input-data" type="text" required> </label>
+    </fieldset>
     <button id="btn-enviar" type="submit">Enviar</button>
   </form>
 
