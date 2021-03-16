@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  margin: 25px 0;
+}
+
+form {
+  margin: 0 25px;
+}
+
+fieldset {
+  background-color: floralwhite;
+  border: black solid 1px;
+  border-radius: 3px;
+  margin-bottom: 25px;
+  padding: 15px;
+}
+
+.resposta {
+  display: block;
+  margin-bottom: 25px;
+}
+
+#label-tipo {
+  margin-right: 15px;
+}
+
+#radio-apt {
+  margin-left: 15px;
+}
