@@ -5,88 +5,73 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
 
-  <title>Currículo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="DatePickerX-master/dist/css/DatePickerX.min.css">
+
+  <title>Document</title>
 </head>
 
 <body>
   <header>
     <h1>Currículo</h1>
   </header>
-  <form action="" method="GET" enctype="multipart/form-data">
+  <form class="js-form" action="" method="GET" enctype="multipart/form-data">
     <fieldset id="fieldset-informacao">
       <legend>Informações Pessoais</legend>
-      <section id="div-infPessoais">
-        <div class="mb-3">
-          <label class="form-label" for="input-name">Nome:<input class="form-control" id="input-name" type="text"
-              maxlength="40" required></label>
-          <label class="form-label" for="input-email">E-mail:<input class="form-control" id="input-email" type="email"
-              maxlength="50" required></label>
-          <label class="form-label" for="input-cpf">CPF: <input class="form-control" id="input-cpf" type="text"
-              maxlength="11" required></label>
-          <label class="form-label" for="input-endereco">Endereço: <input class="form-control" id="input-endereco"
-              type="text" maxlength="200" required></label>
-          <label class="form-label" for="input-cidade">Cidade: <input class="form-control" id="input-cidade" type="text"
-              maxlength="28" required></label>
-        </div>
-        <div>
-          <label class="form-label" for="select-estado">Estado:</label>
-          <select class="form-select" name="estado" id="select-estado" required>
-          </select>
-        </div>
+      <div id="div-infPessoais">
+        <label for="nome">Nome:<input class="resposta" type="text" data-validate-field="name" name="name"
+            id="name"></label>
+        <label for="input-email">E-mail:<input class="resposta" id="input-email" type="email" maxlength="50"
+            required></label>
+        <label for="input-cpf">CPF: <input class="resposta" id="input-cpf" type="text" maxlength="11" required></label>
+        <label for="input-endereco">Endereço: <input class="resposta" id="input-endereco" type="text" maxlength="200"
+            required></label>
+        <label for="input-cidade">Cidade: <input class="resposta" id="input-cidade" type="text" maxlength="28"
+            required></label>
+      </div>
+      <div>
+        <label for="select-estado">Estado:</label>
+        <select class="resposta" name="estado" id="select-estado" required>
+        </select>
+      </div>
+      <div>
+        <label id="label-tipo" for="radio">Tipo:</label>
 
-        <label class="form-label">Tipo:</label>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-          <label class="form-check-label" for="flexRadioDefault1">
-            Casa
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-          <label class="form-check-label" for="flexRadioDefault2">
-            Apartamento
-          </label>
-        </div>
-      </section>
+        <label for="radio-casa">Casa<input class="radio-tipo" name="radio" type="radio" id="radio-casa"
+            value="Casa"></label>
+
+        <label for="radio-apt">Apartamento<input class="radio-tipo" name="radio" type="radio" id="radio-apt"
+            value="apt"></label>
+      </div>
     </fieldset>
 
     <fieldset id="fieldset-qualificacoes">
       <legend>Último Emprego</legend>
-      <label class="form-label" for="curriculo">Faça um resumo do seu útimo emprego:</label>
-      <textarea class="form-control" name="resumo-curriculo" id="curriculo" cols="75" rows="20" maxlength="1000"
+      <label for="curriculo">Faça um resumo do seu útimo emprego:</label>
+      <textarea class="resposta" name="resumo-curriculo" id="curriculo" cols="75" rows="20" maxlength="1000"
         required></textarea>
-      <div class="input-group mb-3">
-        <label class="form-label" for="input-cargo">Cargo:<input class="input-group-text" id="input-cargo" type="text"
-            maxlength="40" required></label>
-      </div>
-      <div class="input-group mb-3">
-        <label class="form-label" for="input-descricao">Descrição do Cargo: <input class="input-group-text" type="text"
-            id="input-descricao" maxlength="500" required></label>
-      </div>
-      <div class="input-group mb-3">
-        <label class="form-label" for="input-data">Data de Início <input class="input-group-text" id="input-data"
-            type="text" required> </label>
-      </div>
+      <label for="input-cargo">Cargo:<input class="resposta" id="input-cargo" type="text" maxlength="40"
+          required></label>
+
+      <label for="input-descricao">Descrição do Cargo: <input class="resposta" type="text" id="input-descricao"
+          maxlength="500" required></label>
+      <label for="input-data">Data de Início <input class="resposta" id="input-data" type="text" required> </label>
     </fieldset>
-    <button class="btn btn-success" id="btn-enviar" type="submit">Enviar</button>
-    <button class="btn btn-danger" id="btn-limpar" type="reset">Limpar</button>
+    <button id="btn-enviar" type="submit">Enviar</button>
+
+    <button type="reset" id="btn-limpar">Limpar</button>
   </form>
 
 
   <div id="div-respostas"></div>
 
-  <script src="node_modules/pikaday/pikaday.js"></script>
-  <script>
-    var picker = new Pikaday({
-      field: document.getElementById('datepicker')
-    });
-  </script>
+
+  <script src="node_modules/just-validate/dist/js/just-validate.min.js"></script>
+  <script src="DatePickerX-master/dist/js/DatePickerX.min.js"></script>
   <script src="script.js"></script>
+
+
 </body>
 
 </html>
