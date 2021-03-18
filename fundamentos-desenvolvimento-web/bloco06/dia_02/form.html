@@ -6,8 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css">
+
   <link rel="stylesheet" href="DatePickerX-master/dist/css/DatePickerX.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 
   <title>Document</title>
 </head>
@@ -17,56 +19,78 @@
     <h1>Currículo</h1>
   </header>
   <form class="js-form" action="" method="GET" enctype="multipart/form-data">
-    <fieldset id="fieldset-informacao">
+    <fieldset class="row mb-3" id="fieldset-informacao">
       <legend>Informações Pessoais</legend>
-      <div id="div-infPessoais">
-        <label for="nome">Nome:<input class="resposta" type="text" data-validate-field="name" name="name"
-            id="name"></label>
-        <label for="input-email">E-mail:<input class="resposta" id="input-email" type="email" maxlength="50"
-            required></label>
-        <label for="input-cpf">CPF: <input class="resposta" id="input-cpf" type="text" maxlength="11" required></label>
-        <label for="input-endereco">Endereço: <input class="resposta" id="input-endereco" type="text" maxlength="200"
-            required></label>
-        <label for="input-cidade">Cidade: <input class="resposta" id="input-cidade" type="text" maxlength="28"
-            required></label>
-      </div>
-      <div>
+      <section id="section-infPessoais">
+        <section class="mb-3">
+          <label class="form-label" for="nome">Full Name:<input class="form-control resposta" type="text"
+              data-validate-field="name" name="name" id="name"></label>
+        </section>
+        <section class="mb-3">
+          <label class="form-label" for="input-email">E-mail:<input class="form-control resposta" id="input-email"
+              type="email" maxlength="50" required></label>
+        </section>
+        <section class="mb-3">
+          <label class="form-label" for="input-cpf">CPF: <input class="form-control resposta" id="input-cpf" type="text"
+              maxlength="11" required></label>
+        </section>
+        <section class="mb-3">
+          <label class="form-label" for="input-endereco">Endereço: <input class="form-control resposta"
+              id="input-endereco" type="text" maxlength="200" required></label>
+        </section>
+        <section class="mb-3">
+          <label class="form-label" for="input-cidade">Cidade: <input class="form-control resposta" id="input-cidade"
+              type="text" maxlength="28" required></label>
+        </section>
+      </section>
+
+      <section class="mb-3">
         <label for="select-estado">Estado:</label>
-        <select class="resposta" name="estado" id="select-estado" required>
+        <select class="form-select resposta" name="estado" id="select-estado" required>
         </select>
-      </div>
-      <div>
-        <label id="label-tipo" for="radio">Tipo:</label>
+      </section>
 
-        <label for="radio-casa">Casa<input class="radio-tipo" name="radio" type="radio" id="radio-casa"
-            value="Casa"></label>
-
-        <label for="radio-apt">Apartamento<input class="radio-tipo" name="radio" type="radio" id="radio-apt"
-            value="apt"></label>
-      </div>
+      <section>
+        <label id="label-tipo" for="">Tipo:</label>
+        <section class="form-check">
+          <label class="form-check-label" for="radio-casa">Casa<input class="form-check-input radio-tipo" name="radio"
+              type="radio" id="radio-casa" value="Casa"></label>
+        </section>
+        <section class="form-check">
+          <label class="form-check-label" for="radio-apt">Apartamento<input class="form-check-input radio-tipo"
+              name="radio" type="radio" id="radio-apt" value="apt"></label>
+        </section>
+      </section>
     </fieldset>
 
-    <fieldset id="fieldset-qualificacoes">
+    <fieldset class="row mb-3" id="fieldset-qualificacoes">
       <legend>Último Emprego</legend>
-      <label for="curriculo">Faça um resumo do seu útimo emprego:</label>
-      <textarea class="resposta" name="resumo-curriculo" id="curriculo" cols="75" rows="20" maxlength="1000"
-        required></textarea>
-      <label for="input-cargo">Cargo:<input class="resposta" id="input-cargo" type="text" maxlength="40"
-          required></label>
+      <section>
+        <label for="curriculo">Faça um resumo do seu útimo emprego:</label>
+        <textarea class="form-control resposta" name="resumo-curriculo" id="curriculo" cols="75" rows="20"
+          maxlength="1000" required></textarea>
+      </section>
+      <section class="mb-3">
+        <label class="form-label" for="input-cargo">Cargo:<input class="form-control resposta" id="input-cargo"
+            type="text" maxlength="40" required></label>
+      </section>
+      <section class="mb-3">
+        <label class="form-label" for="input-descricao">Descrição do Cargo: <input class="form-control resposta"
+            type="text" id="input-descricao" maxlength="500" required></label>
+      </section>
 
-      <label for="input-descricao">Descrição do Cargo: <input class="resposta" type="text" id="input-descricao"
-          maxlength="500" required></label>
       <label for="input-data">Data de Início <input class="resposta" id="input-data" type="text" required> </label>
     </fieldset>
-    <button id="btn-enviar" type="submit">Enviar</button>
-
-    <button type="reset" id="btn-limpar">Limpar</button>
+    <section class="d-grid gap-2 mx-auto button-section">
+      <button type="button" class="btn btn-success">Enviar</button>
+      <button type="button" class="btn btn-danger">Limpar</button>
+    </section>
   </form>
 
 
-  <div id="div-respostas"></div>
+  <section id="div-respostas"></section>
 
-
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="node_modules/just-validate/dist/js/just-validate.min.js"></script>
   <script src="DatePickerX-master/dist/js/DatePickerX.min.js"></script>
   <script src="script.js"></script>
