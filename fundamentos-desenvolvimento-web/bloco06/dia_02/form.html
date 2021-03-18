@@ -23,24 +23,24 @@
       <legend>Informações Pessoais</legend>
       <section id="section-infPessoais">
         <section class="mb-3">
-          <label class="form-label" for="nome">Full Name:<input class="form-control resposta" type="text"
+          <label class="form-label" for="name">Full Name:<input class="form-control resposta" type="text"
               data-validate-field="name" name="name" id="name"></label>
         </section>
         <section class="mb-3">
           <label class="form-label" for="input-email">E-mail:<input class="form-control resposta" id="input-email"
-              type="email" maxlength="50" required></label>
+              type="email" maxlength="50" data-validate-field="email" name="email"></label>
         </section>
         <section class="mb-3">
-          <label class="form-label" for="input-cpf">CPF: <input class="form-control resposta" id="input-cpf" type="text"
-              maxlength="11" required></label>
+          <label class="form-label" for="cpf">CPF:<input class="form-control resposta" id="cpf" type="text"
+              data-validate-field="text" name="cpf"></label>
         </section>
         <section class="mb-3">
-          <label class="form-label" for="input-endereco">Endereço: <input class="form-control resposta"
-              id="input-endereco" type="text" maxlength="200" required></label>
+          <label class="form-label" for="endereco">Endereço: <input class="form-control resposta" id="input-endereco"
+              type="text" data-validate-field="text2" name="endereco"></label>
         </section>
         <section class="mb-3">
-          <label class="form-label" for="input-cidade">Cidade: <input class="form-control resposta" id="input-cidade"
-              type="text" maxlength="28" required></label>
+          <label class="form-label" for="cidade">Cidade: <input class="form-control resposta" id="cidade" type="text"
+              data-validate-field="text" name="cidade"></label>
         </section>
       </section>
 
@@ -82,8 +82,8 @@
       <label for="input-data">Data de Início <input class="resposta" id="input-data" type="text" required> </label>
     </fieldset>
     <section class="d-grid gap-2 mx-auto button-section">
-      <button type="button" class="btn btn-success">Enviar</button>
-      <button type="button" class="btn btn-danger">Limpar</button>
+      <button id="btn-enviar" type="submit" class="btn btn-success">Enviar</button>
+      <button type="reset" class="btn btn-danger">Limpar</button>
     </section>
   </form>
 

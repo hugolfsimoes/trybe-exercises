@@ -1,6 +1,18 @@
+new window.JustValidate('.js-form');
 const datePicker = document.getElementById('input-data');
 datePicker.DatePickerX.init({
   format: 'dd/mm/yyyy'
+});
+new JustValidate('.js-form', {
+  rules: {
+    text3: {
+      required: true,
+    },
+    text2: {
+      required: true,
+      maxLength: 5
+    }
+  }
 });
 
 let arrayEstados = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO']
