@@ -1,17 +1,16 @@
 function techList(tecnologias, nome) {
-  let array = [];
   if (tecnologias.length !== 0) {
     tecnologias = tecnologias.sort();
-    for (let key = 0; key < tecnologias.length; key += 1) {
-      array[key] = {
-        tech: tecnologias[key],
-        name: nome,
-      };
+    return tecnologias.map((element)=> {
+      return {
+        tech: element,
+        name: nome
+      }
+    });
     }
-  } else {
-    array = 'Vazio!';
+  else {
+    return 'Vazio!';
   }
-  return array;
 }
 
 module.exports = techList;
