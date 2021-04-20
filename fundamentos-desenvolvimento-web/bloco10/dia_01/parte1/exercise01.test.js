@@ -1,4 +1,4 @@
-const { test, expect } = require('@jest/globals');
+
 const sum = require('./exercise01')
 
 describe('Soma de dois valores', () => {
