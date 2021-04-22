@@ -17,12 +17,12 @@ const users = {
     return findUserById(userID).then(user => user.name);
   };
 
-  describe('Testing the function findUserById', () => {
+  describe('Testing the function findUserById using Promise', () => {
     describe('Testing the id exists', () => {
-      it('return the name', async () => {
+      it('return the name',  () => {
         expect.assertions(1);
-        const user = await getUserName(4);
-        return expect(user).toEqual('Mark');
+        const user =  getUserName(4);
+        return getUserName(4).then(data => expect(data).toEqual('Mark'));
       });
     });
     
