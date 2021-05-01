@@ -30,7 +30,7 @@ const estados = [
     estado: 'Maranhão',
   },
   {
-    estado: 'ato Grosso',
+    estado: 'Mato Grosso',
   },
   {
     estado: 'Mato Grosso do Sul',

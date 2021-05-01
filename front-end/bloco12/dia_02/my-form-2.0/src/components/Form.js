@@ -6,7 +6,7 @@ class Forms extends React.Component {
     super(props);
 
     this.handleChange = this.handleChange.bind(this);
-
+    this.handleBlur = this.handleBlur.bind(this);
     this.state = {
       nome: '',
       email: '',
@@ -19,15 +19,25 @@ class Forms extends React.Component {
   }
 
   handleChange({target}) {
-    console.log(target);
-    const {name, type} = target;
+    const {name,  options, selectedIndex} = target;
     let value = '';
     value = name === 'nome' ? target.value = target.value.toUpperCase() : target.value;
-    
+    value = name === 'estado' ? options[selectedIndex].value : value;
+    value = name === 'tipo' ? target.value : value;
     
    this.setState({
      [name]: value,
    })
+  }
+  
+  handleBlur({target}) {
+    const cidade = this.state.cidade
+    let value = cidade[0] === '0'|| cidade[0] ==='1'|| cidade[0] ==='2'|| cidade[0] ==='3'|| cidade[0] ==='4'|| cidade[0] ==='5'|| cidade[0] ==='6'|| cidade[0] ==='7'|| cidade[0] ==='8'|| cidade[0] ==='9' ? target.value = '' : cidade;
+
+
+    this.setState({
+      cidade: value,
+    })
   }
 
   render() {
@@ -52,7 +62,7 @@ class Forms extends React.Component {
         </label>
 
         <label>Cidade:
-        <input type="text" maxLength="28" name="cidade" required onChange={this.handleChange}></input>
+        <input type="text" maxLength="28" name="cidade" required onChange={this.handleChange} onBlur={this.handleBlur}></input>
         </label>
 
         <label>
@@ -62,10 +72,10 @@ class Forms extends React.Component {
         </label>
 
         <label>Casa
-          <input type="radio" name="type"></input>
+          <input type="radio" name="tipo"  className="radio-btn" value="Casa" onChange={this.handleChange}></input>
         </label>
         <label>Apartamento
-          <input type="radio" name="type"></input>
+          <input type="radio" name="tipo"  className="radio-btn" value="Apartamento" onChange={this.handleChange}></input>
         </label>
        </fieldset>
       </forms>
