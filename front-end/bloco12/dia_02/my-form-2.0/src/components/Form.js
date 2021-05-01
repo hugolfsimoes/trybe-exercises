@@ -19,9 +19,10 @@ class Forms extends React.Component {
   }
 
   handleChange({target}) {
-    const {name} = target;
+    console.log(target);
+    const {name, type} = target;
     let value = '';
-    value = name === 'nome' ? target.value= target.value.toUpperCase() : target.value;
+    value = name === 'nome' ? target.value = target.value.toUpperCase() : target.value;
     
     
    this.setState({
@@ -32,6 +33,7 @@ class Forms extends React.Component {
   render() {
 
     return(
+      <forms>
       <fieldset>
         <label>Nome:
         <input type="text" maxLength="40" name="nome" required onChange={this.handleChange}></input>
@@ -54,7 +56,7 @@ class Forms extends React.Component {
         </label>
 
         <label>
-          <select name="estado">
+          <select name="estado" onChange={this.handleChange}>
             <Option />
           </select>
         </label>
@@ -65,7 +67,8 @@ class Forms extends React.Component {
         <label>Apartamento
           <input type="radio" name="type"></input>
         </label>
-      </fieldset>
+       </fieldset>
+      </forms>
       
     )
   }
