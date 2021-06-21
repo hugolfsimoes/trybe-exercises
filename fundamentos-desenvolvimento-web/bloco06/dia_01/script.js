@@ -8,6 +8,9 @@ function adicionaEstados() {
     criaEstado.value = arrayEstados[index];
     selectEstado.appendChild(criaEstado);
   }
+  const answersArray = [0, 1, 2];
+  answersArray.sort(() => Math.random() - 0.5);
+  console.log(answersArray);
 }
 adicionaEstados();
 
@@ -28,11 +31,13 @@ const inputs = document.querySelectorAll('input');
 const divRespostas = document.querySelector('#div-respostas');
 const dataInicio = document.querySelector('#input-data');
 const btnEnviar = document.querySelector('#btn-enviar');
+
 btnEnviar.addEventListener('click', (event) => {
   let dataSeparada = dataInicio.value.split('/');
   let dia = dataSeparada[0];
   let mes = dataSeparada[1];
   let ano = dataSeparada[2];
+
 
   if (dia <= 0 || dia > 31 || mes < 0 || mes > 12 || ano < 0) {
     alert('Data de Início incorreta');
