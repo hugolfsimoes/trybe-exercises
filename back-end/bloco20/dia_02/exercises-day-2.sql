@@ -14,4 +14,11 @@ SELECT Name FROM Scientists.Projects ORDER BY Hours  LIMIT 1 OFFSET 1;
 SELECT * FROM Scientists.Projects ORDER BY Hours LIMIT 5 ;
 SELECT CONCAT('Existem ', COUNT(Name), ' cientistas na tabela Scientists.') as 'Número de cientistas' FROM Scientists.Scientists;
 
+Bônus
+
+SELECT Piece, Price FROM PiecesProviders.Provides WHERE Provider = 'RBT';
+SELECT * FROM PiecesProviders.Provides ORDER BY Price DESC LIMIT 5;
+SELECT DISTINCT Provider, Price FROM PiecesProviders.Provides ORDER BY Price DESC LIMIT 4 OFFSET 3;
+SELECT * FROM PiecesProviders.Provides WHERE Provider = 'HAL' ORDER BY Price DESC;
+SELECT COUNT(PiecePiece) FROM PiecesProviders.Provides WHERE Piece = '1';
 
