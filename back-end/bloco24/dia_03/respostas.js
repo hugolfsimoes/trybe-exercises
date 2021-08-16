@@ -192,7 +192,7 @@
 22 -
   db.movies.find({
     $text: {
-      $search: "monstrous criminal",
+      $search: "monsatrous criminal",
     },
   });
 
