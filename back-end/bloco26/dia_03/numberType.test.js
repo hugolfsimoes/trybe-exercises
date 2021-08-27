@@ -29,7 +29,7 @@ describe("Executa a função numberType", () => {
       it("é igual a 'negativo'", () => {
         const resposta = numberType(-2);
 
-        expect(resposta.to.be.equal("negativo"));
+        expect(resposta).to.be.equal("negativo");
       });
     });
   });
@@ -45,6 +45,21 @@ describe("Executa a função numberType", () => {
         const resposta = numberType(0);
 
         expect(resposta).to.be.equal("neutro");
+      });
+    });
+  });
+  describe("quando o parâmetro não for do tipo 'number", () => {
+    describe("a resposta", () => {
+      it("é igual a 'string'", () => {
+        const resposta = numberType("A");
+
+        expect(resposta).to.be.a("string");
+      });
+
+      it("é igual a", () => {
+        const resposta = numberType("A");
+
+        expect(resposta).to.be.equal("o valor deve ser um número");
       });
     });
   });
