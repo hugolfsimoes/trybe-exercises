@@ -1,19 +1,7 @@
 const connection = require('./connection');
-
-const cepRegexValidation = /\d{5}-\d{3}/;
-
-const isCepValid = (cep) => {
-  if (!cepRegexValidation.test(cep)) return false;
-
-  return true;
-};
-
-const removeHifen = (cep) => {
-  return cep.replace('-', '');
-};
+const cepService = require('../services/cepService');
 
 const getAdressByCep = async (cep) => {
-  cep = removeHifen(cep);
   const [result] = await connection.execute('SELECT * FROM ceps WHERE cep=?', [
     cep,
   ]);
@@ -23,11 +11,10 @@ const getAdressByCep = async (cep) => {
 };
 
 const createCep = async (cep, logradouro, bairro, localidade, uf) => {
-  cep = removeHifen(cep);
   const [newAdress] = await connection.execute(
     'INSERT INTO ceps (cep, logradouro, bairro, localidade, uf) VALUES (?,?,?,?,?)',
     [cep, logradouro, bairro, localidade, uf]
   );
   return { cep, logradouro, bairro, localidade, uf };
 };
-module.exports = { isCepValid, getAdressByCep, createCep };
+module.exports = { getAdressByCep, createCep };
