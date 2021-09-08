@@ -15,6 +15,7 @@ const createCep = async (cep, logradouro, bairro, localidade, uf) => {
     'INSERT INTO ceps (cep, logradouro, bairro, localidade, uf) VALUES (?,?,?,?,?)',
     [cep, logradouro, bairro, localidade, uf]
   );
+
   return { cep, logradouro, bairro, localidade, uf };
 };
 module.exports = { getAdressByCep, createCep };
