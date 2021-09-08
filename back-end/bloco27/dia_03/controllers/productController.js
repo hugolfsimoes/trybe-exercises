@@ -3,38 +3,45 @@ const ProductModel = require('../models/productModel');
 
 const router = express.Router();
 
-router.get('/list-products', async (req, res, next) => {
+router.get('/products', async (req, res, next) => {
   const products = await ProductModel.getAll();
 
-  res.send(products);
+  res.status(200).json(products);
 });
 
-router.get('/get-by-id/:id', async (req, res, next) => {
+router.get('products/:id', async (req, res, next) => {
   const product = await ProductModel.getById(req.params.id);
-
-  res.send(product);
+  if (!product) return res.status(404).json({ message: 'Product not found' });
+  res.status(200).json(product);
 });
 
-router.post('/add-user', async (req, res) => {
+router.post('products/', async (req, res) => {
   const { name, brand } = req.body;
-
-  const newProduct = await ProductModel.add(name, brand);
-
-  res.send(newProduct);
+  try {
+    const newProduct = await ProductModel.add(name, brand);
+    res.status(200).json(newProduct);
+  } catch (error) {
+    res.status(500).json({ message: 'Algo deu errado' });
+  }
 });
 
-router.post('/delete-user/:id', async (req, res) => {
-  const products = await ProductModel.exclude(req.params.id);
-
-  res.send(products);
+router.delete('products/:id', async (req, res) => {
+  try {
+    const products = await ProductModel.exclude(req.params.id);
+    res.status(200).json(products);
+  } catch (error) {
+    res.status(500).json({ message: 'Algo deu errado' });
+  }
 });
 
-router.post('/update-user/:id', async (req, res) => {
+router.put('/products/:id', async (req, res) => {
   const { name, brand } = req.body;
-
-  const products = await ProductModel.update(req.params.id, name, brand);
-
-  res.send(products);
+  try {
+    const products = await ProductModel.update(req.params.id, name, brand);
+    res.status(200).json(products);
+  } catch (error) {
+    res.status(500).json({ message: 'Algo deu errado' });
+  }
 });
 
 module.exports = router;
