@@ -7,4 +7,12 @@ def biggerNumber(numOne, numTwo):
         return "Same numbers"
 
 
-print(biggerNumber(3, 3))
+def mediaAritimetica(lista):
+    result = 0
+    for num in lista:
+        result += num
+
+    return result / len(lista)
+
+
+print(mediaAritimetica([10, 20, 30, 40, 50]))
