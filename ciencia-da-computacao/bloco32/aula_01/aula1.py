@@ -15,4 +15,13 @@ def mediaAritimetica(lista):
     return result / len(lista)
 
 
-print(mediaAritimetica([10, 20, 30, 40, 50]))
+def square(n):
+
+    for x in range(n):
+        result = ""
+        for y in range(n):
+            result += "*"
+        print(result)
+
+
+square(5)
